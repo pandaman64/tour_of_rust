@@ -1,0 +1,62 @@
+<html lang="ja">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155199982-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155199982-1');
+        </script>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+        <title>Tour of Rust - 基本的な型</title>
+        <link rel="stylesheet" href="tour.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/pojoaque.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    </head>
+    <body>
+        <div class="tour">
+            <div class="header">
+                <span class="title"><a href="index_ja.html">Tour of Rust</a></span>
+                <span class="nav">
+                <span class="toc"><a href="TOC_ja.html">目次</a></span>
+            </div>
+            <div class="page">
+            <h1>基本的な型</h1>
+            <p>Rustにはおなじみの型がいくつかあります．</p>
+<ul>
+<li>真理値型 - 真(true)・偽(false)を表すためには<code>bool</code>を使います．</li>
+<li>符号なし整数型 - 0以上の整数を表すためには<code>u8</code>・<code>u32</code>・<code>u64</code>・<code>u128</code>を使います．</li>
+<li>符号付き整数型 - 負数も含めた整数を表すためには<code>i8</code>・<code>i32</code>・<code>i64</code>・<code>i128</code>を使います．</li>
+<li>ポインタ長の整数型 - <code>usize</code>と<code>isize</code>はインデックスやメモリ上における長さを表すために使います．</li>
+<li>浮動小数点数型 -  <code>f32</code>・<code>f64</code></li>
+<li>タプル型 - <code>(value, value, ...)</code>という形で，固定長の値の組を表す型です．</li>
+<li>配列型 - 同じ型の要素の集まりで，長さがコンパイル時に決まっているものの型です．</li>
+<li>スライス型 - 同じ型の要素の集まりで，長さが実行時に決まるものの型です．</li>
+<li><code>str</code>(文字列スライス) - 長さが実行時に決まる文字列の型です．</li>
+</ul>
+<p>Rustにおける文字列は他の言語のよりも複雑に感じられるかもしれません．
+これは，Rustはシステムプログラミング言語としてメモリについて他の言語とは異なった見方をしているからです．
+詳しくは後にまた扱います．</p>
+<p>数値の型は最後に型の名前を追加することで明示的に宣言することができます．
+例えば，<code>13u32</code>や<code>2u8</code>と書けます．</p>
+            <div class="bottomnav">
+                <span class="back"><a href="04_ja.html">❮ 戻る</a></span>
+                <span class="next"><a href="06_ja.html">次へ ❯</a></span>
+            </div>
+            </div>
+            <div class="code">
+            <iframe width="100%" src="https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=fn%20main()%20%7B%0A%20%20%20%20let%20x%20%3D%2012%3B%20%2F%2F%20by%20default%20this%20is%20i32%0A%20%20%20%20let%20a%20%3D%2012u8%3B%0A%20%20%20%20let%20b%20%3D%204.3%3B%20%2F%2F%20by%20default%20this%20is%20f64%0A%20%20%20%20let%20c%20%3D%204.3f32%3B%0A%20%20%20%20let%20bv%20%3D%20true%3B%0A%20%20%20%20let%20t%20%3D%20(13%2C%20false)%3B%0A%20%20%20%20let%20sentence%20%3D%20%22hello%20world!%22%3B%0A%20%20%20%20println!(%0A%20%20%20%20%20%20%20%20%22%7B%7D%20%7B%7D%20%7B%7D%20%7B%7D%20%7B%7D%20%7B%7D%20%7B%7D%20%7B%7D%22%2C%0A%20%20%20%20%20%20%20%20x%2C%20a%2C%20b%2C%20c%2C%20bv%2C%20t.0%2C%20t.1%2C%20sentence%0A%20%20%20%20)%3B%0A%7D%0A" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            </div>
+        </div>
+    </body>
+    <script src="/tour.js"></script>
+</html>
